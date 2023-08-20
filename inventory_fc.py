@@ -53,7 +53,7 @@ while(loop):
     elif menu == "4":
         idNumber = input("Fill Id Number : ")
         if (idNumber in List_item):
-            print("Item Name : ", List_item[itemName].getItemName())
+            print("Item Name : ", List_item[idNumber].getItemName())
             print("Id Number : ", List_item[idNumber].getId())
         else:
             print("no match data")
@@ -61,7 +61,7 @@ while(loop):
         idNumber = input("Fill Id Number : ")
         if(idNumber in List_item):
             newName = input("Fill New Name : ")
-            List_item[newName].setItemName(newName)
+            List_item[idNumber].setItemName(newName)
         else:
             print("no match data")
     elif menu == "6":
