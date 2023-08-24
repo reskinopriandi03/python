@@ -66,7 +66,7 @@ while(loop):
                 print("Invalid input. Quantity should be a positive number.")
         while True:
             price = input("Fill price     : ")
-            if price.isdigit():  # Memeriksa apakah hanya terdiri dari angka, termasuk desimal
+            if price.isdigit():  # To make sure it only contains positive numerical"
                 break
             else:
                 print("Invalid input. Price should be a valid number.")
@@ -123,17 +123,17 @@ while(loop):
             action = input("Choose '+' to add or '-' to subtract quantity : ")
             if action == "+":
                 newStock = int(str(input("Fill Quantity to add : ")))
-                current_quantity = int(List_item[idNumber].getQuantity())  # Konversi ke integer
+                current_quantity = int(List_item[idNumber].getQuantity())  # convert to integer
                 if newStock > 0:
-                    List_item[idNumber].setQuantity(current_quantity + newStock)  # Konversi kembali ke string
+                    List_item[idNumber].setQuantity(current_quantity + newStock)  # convert to back to string
                     print("Quantity updated!")
                 else:
                     print("Insufficient quantity to subtract.")
             elif action == "-":
                 newStock = int(input("Fill Quantity to subtract : "))
-                current_quantity = int(List_item[idNumber].getQuantity())  # Konversi ke integer
+                current_quantity = int(List_item[idNumber].getQuantity())  # convert to integer
                 if newStock <= current_quantity and current_quantity > 0 :
-                    List_item[idNumber].setQuantity(str(current_quantity - newStock))  # Konversi kembali ke string
+                    List_item[idNumber].setQuantity(str(current_quantity - newStock))  # convert to back to string
                     print("Quantity updated!")
                 else:
                     print("Insufficient quantity to subtract.")
