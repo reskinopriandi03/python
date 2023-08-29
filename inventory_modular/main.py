@@ -18,7 +18,7 @@ csv_exists = os.path.exists(csv_path)
 if not csv_exists:
     with open(csv_path, "a", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["No.", "Item", "ID", "Quantity", "Price"])
+        writer.writerow(["No", "Item", "ID", "Quantity", "Price"])
 
 List_item = read_csv(csv_path)
 loop = True
